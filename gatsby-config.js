@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -25,6 +29,30 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `rosella`,
+        accessToken: `${process.env.API_KEY}`,
+        // linkResolver: ({ node, key, value }) => post =>
+        //   `/proyectos/${post.uid}`,
+        schemas: {
+          header: require(`./src/schemas/header.json`),
+          homepage: require(`./src/schemas/homepage.json`),
+          blog_posts: require(`./src/schemas/blog_posts.json`),
+          categories: require(`./src/schemas/categories.json`),
+        },
+      },
+    },
+    `gatsby-plugin-emotion`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,0 +1,53 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "announcement": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph, hyperlink",
+        "allowTargetBlank": true,
+        "label": "Announcement"
+      }
+    },
+    "facebook": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Facebook"
+      }
+    },
+    "instagram": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Instagram"
+      }
+    },
+    "pinterest": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Pinterest"
+      }
+    },
+    "twitter": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Twitter"
+      }
+    },
+    "email": {
+      "type": "Link",
+      "config": {
+        "label": "Email"
+      }
+    }
+  }
+}

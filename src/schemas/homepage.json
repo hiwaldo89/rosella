@@ -1,0 +1,181 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "slider": [],
+          "featured__block": [],
+          "posts_feed": [],
+          "posts_feed_with_ad": []
+        },
+        "choices": {
+          "slider": {
+            "type": "Slice",
+            "fieldset": "Slider",
+            "description": "Image slider",
+            "icon": "view_carousel",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
+              "top_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Top text"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Description"
+                }
+              },
+              "button_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Button text"
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button link"
+                }
+              }
+            }
+          },
+          "featured__block": {
+            "type": "Slice",
+            "fieldset": "Featured Block",
+            "description": "Featured block",
+            "icon": "star",
+            "display": "list",
+            "non-repeat": {
+              "top_heading": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Top Heading"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "allowTargetBlank": true,
+                  "label": "Content"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "posts_feed": {
+            "type": "Slice",
+            "fieldset": "Posts feed",
+            "description": "Posts feed",
+            "icon": "view_module",
+            "display": "list",
+            "non-repeat": {
+              "title1": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              }
+            },
+            "repeat": {
+              "filter_by_category": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "categories"
+                  ],
+                  "label": "Filter by category"
+                }
+              }
+            }
+          },
+          "posts_feed_with_ad": {
+            "type": "Slice",
+            "fieldset": "Posts feed with ad",
+            "description": "Posts feed with ad",
+            "icon": "view_module",
+            "display": "list",
+            "non-repeat": {
+              "title1": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              },
+              "ad_slot": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Ad Slot",
+                  "placeholder": "Get this id from your adsense account"
+                }
+              }
+            },
+            "repeat": {
+              "filter_by_category": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "categories"
+                  ],
+                  "label": "Filter by category"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

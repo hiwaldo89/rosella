@@ -1,0 +1,57 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "cover_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Cover image"
+      }
+    },
+    "short_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Short description"
+      }
+    },
+    "categories": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "category": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": [
+                "categories"
+              ],
+              "label": "Category"
+            }
+          }
+        },
+        "label": "Categories"
+      }
+    },
+    "author": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading6",
+        "label": "Author"
+      }
+    }
+  }
+}
