@@ -115,13 +115,15 @@ const PostsFeed = ({ content, filters = [], limit = 4 }) => {
             </Column>
           ))}
           {limit < 4 && process.env.NODE_ENV === "production" && (
-            <AdSense.Google
-              client={process.env.GATSBY_AD_CLIENT}
-              slot={content.ad_slot.text}
-              style={{ display: "block" }}
-              format="auto"
-              responsive="true"
-            />
+            <Column md={6} lg={3}>
+              <AdSense.Google
+                client={process.env.GATSBY_AD_CLIENT}
+                slot={content.ad_slot.text}
+                style={{ display: "block" }}
+                format="auto"
+                responsive="true"
+              />
+            </Column>
           )}
         </Row>
       </Container>
